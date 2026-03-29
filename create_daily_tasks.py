@@ -17,8 +17,8 @@ DAILY_TASKS = [
 
 # 設定（変更不要）
 NOTION_TOKEN = os.environ["NOTION_TOKEN"]
-PROJECT_DB_ID = "e5aca961a2ac83bdad538732d704afeb"
-TASK_DB_ID    = "563ca961a2ac83e5b5f087a395c2681b"
+PROJECT_DB_ID = "de8ca961a2ac82ce8a8c8122c672f72c"
+TASK_DB_ID    = "3dbca961a2ac83ccaf1a814c5a06f840"
 
 HEADERS = {
     "Authorization": f"Bearer {NOTION_TOKEN}",
