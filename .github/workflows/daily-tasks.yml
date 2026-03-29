@@ -1,0 +1,29 @@
+name: Notionデイリータスク自動作成
+
+on:
+  schedule:
+    # 毎朝6:30 JST（= UTC 21:30）に実行
+    - cron: '30 21 * * *'
+  # 手動実行ボタンも有効化（テスト用）
+  workflow_dispatch:
+
+jobs:
+  create-daily-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python環境をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests
+
+      - name: デイリータスクを作成
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python create_daily_tasks.py
