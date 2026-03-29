@@ -16,7 +16,7 @@ DAILY_TASKS = [
 # =============================================
 
 # 設定（変更不要）
-NOTION_TOKEN = os.environ["NOTION_TOKEN"
+NOTION_TOKEN = os.environ["NOTION_TOKEN"]
 PROJECT_DB_ID = "e5aca961a2ac83bdad538732d704afeb"
 TASK_DB_ID    = "563ca961a2ac83e5b5f087a395c2681b"
 
